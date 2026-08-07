@@ -1,0 +1,69 @@
+/* s/estilos.css* /
+/* reset basico */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* la regla elimina los margenes y el relleno predeterminados de todos los elementos y
+ establece el modelo de la caja para incluir el relleno y el borde ancho y alto del elemento */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #000;
+    /*esta regla define la fuente y el color del texto y el cuerpo del documento*/
+    font-size: 32px;
+    text-align: center;
+}
+
+/* aplicar estilos a clases */
+.destacado {
+    background-color: #fdfdfd;
+    padding: 10px;/* aplica con las manillas del reloj: arriba - derecha - abajo - izquierda */
+}
+
+/* Aplicar estilos a identificadores o IDs */
+#inicio { 
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* estilos solo a enlaces */
+nav a {
+    color: #000;
+    margin-right: 15px;
+    transition: color 0.3s; /*cambio suave al pasar el mouse */
+}
+/* pseudo-clase :hover */
+nav a:hover {
+    color: #000; /* al pasar el cursor*/
+}
+
+tbody tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+/* pseudo elemento ::first-letter y ::selection */
+article p::first-letter {
+    font-size: 33px;
+    font-weight: bold;
+    color: #000;
+}
+
+::selection {
+    background-color: #160068;
+    color: #faf9f9;
+}
+
+/* agregar familia de fuentes traida de google fonts*/
+body {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
