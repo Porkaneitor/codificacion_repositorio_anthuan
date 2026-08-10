@@ -1,5 +1,11 @@
 /* estilos.css */
 /* reset basico */
+/* 100% del tamaño que el usuario configuro
+por omsión son 100 pixeles*/
+html {
+    font-size: 100%;
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +16,56 @@
  establece el modelo de la caja para incluir el relleno y el borde ancho y alto del elemento */
 
 body {
+    font-size: 2rem;
+    line-height: 1.6;
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #ffffff;
+    background-color: hsl(0, 74%, 45%);
 }
 
-h1 {
+h1{
     color: #000;
     /*esta regla define la fuente y el color del texto y el cuerpo del documento*/
-    font-size: 32px;
     text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+header {
+    background-color: #fdfdfd;
+    padding: 20px;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    max-width: 70ch;
+    
+}
+main nav a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s; /*cambio suave al pasar el mouse */
+}
+
+
+
+
+/* tranformación y espacio */
+
+header nav a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-decoration: none;;
 }
 
 /* aplicar estilos a clases */
@@ -30,7 +76,9 @@ h1 {
 
 /* Aplicar estilos a identificadores o IDs */
 #inicio { 
-    background: #ffffff;
+    background-image: url('https://i.pinimg.com/736x/f7/97/eb/f797ebbbdc5b1d8fca2f35c0aeb51449.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 20px;
 }
 
