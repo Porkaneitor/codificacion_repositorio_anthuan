@@ -26,8 +26,24 @@ body {
 h1 {
     color: #000;
     /*esta regla define la fuente y el color del texto y el cuerpo del documento*/
-    font-size: 32px;
     text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main p {
+    max-width: 70ch;
+    
 }
 
 /* aplicar estilos a clases */
