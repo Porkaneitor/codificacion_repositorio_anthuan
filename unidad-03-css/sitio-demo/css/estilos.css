@@ -210,7 +210,7 @@ main li {
 /*la tabla de calendario*/
 table {
     border-collapse: colapse;
-    width: 50%;
+    width: 100%;
     margin-bottom: 24px;
 }
 
