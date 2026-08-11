@@ -18,6 +18,14 @@ body {
     background-color: #fcfcfc;
 
 }/*esta regla define la fuente y el color del texto en el cuerpo del documento*/
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    /*0 aplica a la parte vertical y horizontal
+    el auto reparte el espacio sobrante por igual a ambos lados
+    lo centra en un elemento con ancho limitado*/
+}
 h1{
     color: #fff;
     text-align: center;
@@ -37,6 +45,7 @@ h3 {
 p {
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 16px;
 }
 
 header {
@@ -57,7 +66,9 @@ footer{
 
 h2, h3 {
     color: #1f4e79;
+    margin-bottom: 12px;
 }
+
 main p {
     max-width: 70ch;
 }/*ch es el ancho del carater cero de la fuenete en uso. el valor 70 marca el rango
@@ -156,4 +167,9 @@ th, td {
 }
 the fieldset {
     padding: 10px;
+}
+
+section {
+    margin-bottom: 32px;
+
 }
