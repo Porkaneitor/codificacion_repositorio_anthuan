@@ -18,14 +18,11 @@ body {
     background-color: #fcfcfc;
 
 }/*esta regla define la fuente y el color del texto en el cuerpo del documento*/
-
-main {
-    max-width: 1000px;
+.contenedor {
+    max-width: 1200px;
     margin: 0 auto;
-    /*0 aplica a la parte vertical y horizontal
-    el auto reparte el espacio sobrante por igual a ambos lados
-    lo centra en un elemento con ancho limitado*/
 }
+
 h1{
     color: #fff;
     text-align: center;
@@ -90,10 +87,14 @@ header nav a {
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
-
+    display: inline-block;
+    padding: 10px 15px;
 }
-header ul li {
+
+header nav ul {
     list-style-type: none;
+    /*quita las viñetas y el subrayado*/
+
 }
 /*Aplicar estilos a clases*/
 .destacado {
@@ -163,13 +164,58 @@ padding-left: 10px aplica a la izquierda*/
 /*aplica a la tabla horario.html*/
 th, td {
     padding: 10px;
-
+    border: 1px solid #dddddd;
+    text-align: left;
 }
 the fieldset {
     padding: 10px;
 }
 
+thead th {
+    background-color: #1f4e79;
+    color: white;
+} /*trabaja encabezados de la tabla*/
+
+tfoot th {
+    padding: 12px;
+    font-style: italic;
+    background-color: #f5f7fa
+}
+
+fieldset {
+    padding: 16px;
+}
+
 section {
     margin-bottom: 32px;
 
+}
+
+/**/
+main.ul, main ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+main li {
+    margin-bottom: 6px
+}
+
+/*lista descrpitiva*/
+#glosario dt {
+    margin-left: 20px;
+    margin-top: 8px;
+} /*la sangria de <dd> es lo que gace visible la relación entre el término y su descripción*/
+
+/*la tabla de calendario*/
+table {
+    border-collapse: colapse;
+    width: 50%;
+    margin-bottom: 24px;
+}
+
+caption {
+    padding: 8px;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
