@@ -20,7 +20,7 @@
 
 # 📘 Portafolio de Evidencias
 
-### Nombre Completo de la Persona Estudiante
+### Anthuan Daniel Castro Coronado
 
 **CSTI12002 · Codificación de páginas web** · Instituto Nacional de Aprendizaje
 
@@ -257,7 +257,7 @@ _(Escribir al cerrar el módulo, en la sesión 36. Tres preguntas para orientarl
 
 <div align="center" markdown="1">
 
-**Nombre Completo** · correo@ejemplo.com
+**Anthuan Daniel Catro Coronado** castrocoronadoanthuandaniel@gmail.com
 
 Portafolio elaborado durante el módulo CSTI12002 · Instituto Nacional de Aprendizaje · 2026
 
