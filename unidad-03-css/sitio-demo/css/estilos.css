@@ -91,11 +91,16 @@ header nav a {
     padding: 10px 15px;
 }
 
-header nav ul {
+header ul li {
     list-style-type: none;
     /*quita las viñetas y el subrayado*/
 
 }
+
+header nav li {
+    display: inline-block;
+}
+
 /*Aplicar estilos a clases*/
 .destacado {
     background-color: #fff3cd;
