@@ -246,3 +246,7 @@ y los elementos vecinos no se mueven.
 absolute: se ubica respecto al ancestro posicionado más cercano
 fixed: se ubica respecto a la ventana del navegador no se mueve al desplazarse.
 sticky: fluye normal hasta llegar a un umbral y entonces se pega.*/
+
+.figura-destacada {
+    position: relative; /*posiciona como elemento padre general y este no se mueve, es referencia de hijos absolutos*/
+}
