@@ -120,8 +120,8 @@ header nav li {
 /*Aplicar estilos a identificadores o IDs*/
 #inicio {
     position: fixed; /*fija con respecto a la ventana, header queda fijo arriba*/
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     background-image: url(../recursos/fondo1.avif);
     background-size: cover;
