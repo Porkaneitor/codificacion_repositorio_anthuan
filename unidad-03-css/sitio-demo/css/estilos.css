@@ -108,7 +108,7 @@ header nav ul {
      justify-content: center; coloca elementos en el centro
      justify-content: space-between; coloca elementos en ambos lados uniformemente
      justify-content: space-around; coloca espacio alrededor de cada uno */
-     justify-content: space-evenly; coloca todos los espacios iguales
+     justify-content: space-evenly; /*coloca todos los espacios iguales*/
 }
 
 nav li {
@@ -313,13 +313,15 @@ escala de valores de z-index
     padding: 20px;
     border: 1px; color: #616161;
     border-radius: 8px;
-    flex-grow: 1; /*cuando crece si sobre espacio 0 no crece*/
-    flex-shrink: 1; /* cuando encoge si sobre espacio 0 no encoge*/
-    flex-basis: 0;
+    /*flex-grow: 1; cuando crece si sobre espacio 0 no crece
+    flex-shrink: 1; cuando encoge si sobre espacio 0 no encoge
+    flex-basis: 0; */
+    flex-wrap: wrap; /*salta hacia abajo, wrap-reverse salta hacia arriba, no-wrap no hace nada*/
 }
 
 .tarjeta {
     display: flex;
     flex: 1;
     gap: 20px;
+    flex-wrap: wrap;
 }
