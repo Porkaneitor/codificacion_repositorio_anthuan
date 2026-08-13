@@ -305,3 +305,21 @@ escala de valores de z-index
     justify-content: center;
     align-items: center;
 }
+
+.fila-tarjetas {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+    border: 1px; color: #616161;
+    border-radius: 8px;
+    flex-grow: 1; /*cuando crece si sobre espacio 0 no crece*/
+    flex-shrink: 1; /* cuando encoge si sobre espacio 0 no encoge*/
+    flex-basis: 0;
+}
+
+.tarjeta {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
