@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #fcfcfc;
+    padding-top: 50px;
 
 }/*esta regla define la fuente y el color del texto en el cuerpo del documento*/
 
@@ -51,17 +52,23 @@ header {
     background-color: #1f4e79;
     color: white;
     padding: 24px;
+    border-radius: 8px;
 }
 footer{
     background-color: #dce6f1;
     padding: 20px;
     margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
-.portada-texto {
+/*.portada-texto {
     background-color: rgba(0, 0, 40, 0.35); 
     padding: 24px;
     border-radius: 8px;
-}
+} */
 
 
 h2, h3 {
@@ -91,24 +98,33 @@ header nav a {
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
-    display: inline-block;
     padding: 10px 15px;
 }
 
-header ul li {
-    list-style-type: none;
-    /*quita las viñetas y el subrayado*/
+header nav {
+    align-self: center;
+}
 
+header nav ul {
+    display: flex;
+    list-style-type: none; /*quita las viñetas y el subrayado*/
+    gap: 15px; /*separación uniforme entre elementos*/
+     /* justify-content: flex-start; coloca los elementos al inicio de la fila
+     justify-content: flex-end; coloca los elementos al final de la fila
+     justify-content: center; coloca elementos en el centro
+     justify-content: space-between; coloca elementos en ambos lados uniformemente
+     justify-content: space-around; coloca espacio alrededor de cada uno */
+     justify-content: space-evenly; /*coloca todos los espacios iguales*/
 }
 
 nav li {
     margin-right: 15px;
 }
 
-header nav li {
+/*header nav li {
     display: inline-block;
-    margin-right: 15px;
-}
+    margin-right: 15px; 
+} */
 
 /*Aplicar estilos a clases*/
 .destacado {
@@ -120,6 +136,12 @@ header nav li {
 /*Aplicar estilos a identificadores o IDs*/
 #inicio {
     position: fixed; /*fija con respecto a la ventana, header queda fijo arriba*/
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; acomoda arriba
+    align-items: flex-end; acomoda abajo
+    align-items: center; acomoda centro */
+    align-items: baseline; /*acomoda por la linea de texto*/
     top: 0px;
     left: 0px;
     width: 100%;
@@ -275,7 +297,8 @@ sticky: fluye normal hasta llegar a un umbral y entonces se pega.*/
     border-radius: 4px;
     font-size: 0.875rem;
     z-index: 10;
-} /*z-index SOLO FUNCIONA en elementos que tengan un position declarado
+}
+/*z-index SOLO FUNCIONA en elementos que tengan un position declarado
 si el elemento es stactic no funciona
 escala de valores de z-index
 10 para elementos posicionados dentro del contenido
@@ -283,3 +306,28 @@ escala de valores de z-index
 1000 para ventanas emergentes y capas supuespuestas
 (el valor más grande es 9999 no hace falta usarlo casi nunca porque no deja margen a otro valor por encima)*/
 
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fila-tarjetas {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+    border: 1px; color: #616161;
+    border-radius: 8px;
+    /*flex-grow: 1; cuando crece si sobre espacio 0 no crece
+    flex-shrink: 1; cuando encoge si sobre espacio 0 no encoge
+    flex-basis: 0; */
+    flex-wrap: wrap; /*salta hacia abajo, wrap-reverse salta hacia arriba, no-wrap no hace nada*/
+}
+
+.tarjeta {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+}
