@@ -147,7 +147,7 @@ Proyecto propio construido de forma autónoma.
 |  S13   | Tipografía y color         |  tipografía avanzada, color y fondos | [ver](unidad-03-css/sitio-demo/index.html) | [ver](recursos/S.13-Tipografia-fondos.png) |
 |  S14   | Modelo de cajas            |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S15   | Display y posicionamiento  |             | [ver](unidad-03-css/) | [ver](recursos/) |
-|  S16   | Flexbox                    |             | [ver](unidad-03-css/) | [ver](recursos/) |
+|  S16   | Flexbox                    |trabajamos con propiedades de flexbox para posicionar cajas y sus elementos | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S17   | CSS Grid                   |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S18   | Componentes estilizados    |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S19   | Animaciones y filtros      |             | [ver](unidad-03-css/) | [ver](recursos/) |
