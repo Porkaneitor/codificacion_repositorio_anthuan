@@ -95,6 +95,10 @@ header nav a {
     padding: 10px 15px;
 }
 
+header nav {
+    align-self: center;
+}
+
 header nav ul {
     display: flex;
     list-style-type: none; /*quita las viñetas y el subrayado*/
@@ -296,4 +300,8 @@ escala de valores de z-index
 1000 para ventanas emergentes y capas supuespuestas
 (el valor más grande es 9999 no hace falta usarlo casi nunca porque no deja margen a otro valor por encima)*/
 
-
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
