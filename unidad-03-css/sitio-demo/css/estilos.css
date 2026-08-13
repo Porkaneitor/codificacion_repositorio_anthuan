@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #fcfcfc;
+    padding-top: 50px;
 
 }/*esta regla define la fuente y el color del texto en el cuerpo del documento*/
 
@@ -127,7 +128,10 @@ nav li {
     position: fixed; /*fija con respecto a la ventana, header queda fijo arriba*/
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: flex-start; acomoda arriba
+    align-items: flex-end; acomoda abajo
+    align-items: center; acomoda centro */
+    align-items: baseline; /*acomoda por la linea de texto*/
     top: 0px;
     left: 0px;
     width: 100%;
