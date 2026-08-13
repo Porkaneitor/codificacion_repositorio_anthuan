@@ -91,15 +91,19 @@ header nav a {
     letter-spacing: 1px;
     font-size: 0.9rem;
     text-decoration: none;
-    display: inline-block;
     padding: 10px 15px;
 }
 
 header nav ul {
     display: flex;
-    list-style-type: none;
-    /*quita las viñetas y el subrayado*/
-
+    list-style-type: none; /*quita las viñetas y el subrayado*/
+    gap: 15px; /*separación uniforme entre elementos*/
+     /* justify-content: flex-start; coloca los elementos al inicio de la fila
+     justify-content: flex-end; coloca los elementos al final de la fila
+     justify-content: center; coloca elementos en el centro
+     justify-content: space-between; coloca elementos en ambos lados uniformemente
+     justify-content: space-around; coloca espacio alrededor de cada uno */
+     justify-content: space-evenly; coloca todos los espacios iguales
 }
 
 nav li {
@@ -121,6 +125,9 @@ nav li {
 /*Aplicar estilos a identificadores o IDs*/
 #inicio {
     position: fixed; /*fija con respecto a la ventana, header queda fijo arriba*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0px;
     left: 0px;
     width: 100%;
