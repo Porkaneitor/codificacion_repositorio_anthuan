@@ -325,12 +325,12 @@ escala de valores de z-index
     flex-wrap: wrap; /*salta hacia abajo, wrap-reverse salta hacia arriba, no-wrap no hace nada*/
 }
 
-.tarjeta {
+/*.tarjeta {
     display: flex;
     flex: 1;
     gap: 20px;
     flex-wrap: wrap;
-}
+} */
 
 .galeria-grid {
     display: grid; /*actualiza el grid al igual que flexbox, se declara contenedor*/
@@ -339,4 +339,21 @@ escala de valores de z-index
     grid-template-columns: 1fr 3fr; la primera doble que las otras*/
     grid-template-columns: 2fr 1fr 1fr;
     gap: 50;
+}
+
+#contenido {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+
+    grid-template-areas: 'indice principal' 'indice laterral';
+    /*css dibuja la estructura, cada cadena de texto es una fila.
+    cada palabra dentro es una celda
+    repetir un nombre hace que una zona abarque varias celdas
+    aqui el indice ocupa 2 filas de la primera columna*/
+    /*asignar cada elemento a su area*/
+    #contenido > {grid-area: indice;}
+    #contenido > {grid-area: principal;}
+    #contenido > aside {grid-area: lateral;}
+    grid-template-areas: 'indice pricipal';
 }
