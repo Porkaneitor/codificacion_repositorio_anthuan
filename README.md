@@ -148,7 +148,7 @@ Proyecto propio construido de forma autónoma.
 |  S14   | Modelo de cajas            |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S15   | Display y posicionamiento  |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S16   | Flexbox                    |trabajamos con propiedades de flexbox para posicionar cajas y sus elementos | [ver](unidad-03-css/) | [ver](recursos/) |
-|  S17   | CSS Grid                   |             | [ver](unidad-03-css/) | [ver](recursos/) |
+|  S17   | CSS Grid                   |aprendimos grid template | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S18   | Componentes estilizados    |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S19   | Animaciones y filtros      |             | [ver](unidad-03-css/) | [ver](recursos/) |
 |  S20   | SCSS y repaso              |             | [ver](unidad-03-css/) | [ver](recursos/) |
