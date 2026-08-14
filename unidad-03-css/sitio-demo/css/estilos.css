@@ -381,3 +381,9 @@ escala de valores de z-index
     object-fit: cover; /*recorta por el centro en vez de deformar*/
     border-radius: 6px;
 }
+
+.tarjeta2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
