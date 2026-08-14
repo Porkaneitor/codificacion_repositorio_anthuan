@@ -373,3 +373,11 @@ escala de valores de z-index
     #contenido > aside {grid-area: lateral;}
     grid-template-areas: 'indice pricipal';
 }
+
+/*que las imagenes no se deformen*/
+.galeria-grid ing {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*recorta por el centro en vez de deformar*/
+    border-radius: 6px;
+}
