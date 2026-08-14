@@ -325,9 +325,65 @@ escala de valores de z-index
     flex-wrap: wrap; /*salta hacia abajo, wrap-reverse salta hacia arriba, no-wrap no hace nada*/
 }
 
-.tarjeta {
+/*.tarjeta {
     display: flex;
     flex: 1;
     gap: 20px;
     flex-wrap: wrap;
+} */
+
+.galeria-grid {
+    display: grid; /*actualiza el grid al igual que flexbox, se declara contenedor*/
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr; la primera doble que las otras*/
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50;
+}
+
+/*.galeria-grid figure:first-of-type {
+    grid-column: 1 / 3; desde la LINEA 1 a LINEA 3 abarca las COLUMNAS 1 2
+    el segundo numero es la linea donde termina, no la columna que ocupa
+}*/
+
+/*forma abreviada*/
+
+.galeria-grid figure::first-of-type {
+    grid-column: span 2; /*ocupa 2 columnas desde donde le toque. es más legible y no depende de una posición*/
+
+}
+
+.destacado {
+    grid-row: span 2; /*abarca 2 filas*/
+}
+
+#contenido {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+
+    grid-template-areas: 'indice principal' 'indice laterral';
+    /*css dibuja la estructura, cada cadena de texto es una fila.
+    cada palabra dentro es una celda
+    repetir un nombre hace que una zona abarque varias celdas
+    aqui el indice ocupa 2 filas de la primera columna*/
+    /*asignar cada elemento a su area*/
+    #contenido > {grid-area: indice;}
+    #contenido > {grid-area: principal;}
+    #contenido > aside {grid-area: lateral;}
+    grid-template-areas: 'indice pricipal';
+}
+
+/*que las imagenes no se deformen*/
+.galeria-grid ing {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*recorta por el centro en vez de deformar*/
+    border-radius: 6px;
+}
+
+.tarjeta2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
 }
