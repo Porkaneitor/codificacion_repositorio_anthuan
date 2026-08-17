@@ -424,7 +424,7 @@ form input[type="checkbox"],
 form select {
     width: auto;
     margin-right: 6px;
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 form input[type="radio"] + label,
@@ -456,4 +456,4 @@ form input:invalid:not(:placeholder-shown){
     margin-bottom: 15px;
     font-size: 0.8rem;
     color: #6b7be8;
- } /*los (small) acompaños a os campos con los textos (minimo 8 caracteres, entre 1 y 8*/
+ } /*los (small) acompaños a los campos con los textos minimo 8 caracteres, entre 1 y 8 sesiones, ect*/
