@@ -291,9 +291,11 @@ caption {
 
 /*las figuras de galeria.html*/
 figure {
+    background-color: #dddddd;
     border: 1px solid #dddddd;
     border-radius: 6px;
     padding: 12px;
+    box-shadow: 0 2px 4px; color:rgba(151, 49, 49, 0.08);
 }
 
 /*los cinco valores de position
@@ -494,4 +496,19 @@ form input:invalid:not(:placeholder-shown){
 
 .boton-secundario:hover {
     background-color: #4d5563;
+}
+
+.tarjeta {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    /*0: lateral 4: vertical 12: desenfoque, rgba: color con transparencia*/
+}
+
+/*tarjeta interactiva*/
+.tarjeta figure:hover {
+    transform: translatey(-5px);
+    box-shadow: 0 8px 20px  rgba(0, 0, 0, 0.15);
 }
