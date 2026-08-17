@@ -452,7 +452,7 @@ form input:invalid:not(:placeholder-shown){
  /*para los mensajes de ayuda*/
  form small {
     display: block;
-    margin-top: -20px;
+    margin-top: 10px;
     margin-bottom: 15px;
     font-size: 0.8rem;
     color: #6b7be8;
