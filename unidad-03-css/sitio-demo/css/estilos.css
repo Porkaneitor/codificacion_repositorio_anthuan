@@ -424,7 +424,7 @@ form input[type="checkbox"],
 form select {
     width: auto;
     margin-right: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 form input[type="radio"] + label,
@@ -452,8 +452,37 @@ form input:invalid:not(:placeholder-shown){
  /*para los mensajes de ayuda*/
  form small {
     display: block;
-    margin-top: -10px;
+    margin-top: -20px;
     margin-bottom: 15px;
     font-size: 0.8rem;
     color: #6b7be8;
  } /*los (small) acompaños a los campos con los textos minimo 8 caracteres, entre 1 y 8 sesiones, ect*/
+
+ /*estilizar el boton con estados*/
+.boton button {
+    background-color: #c55a11;
+    color: white;
+    padding: 12px, 24px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer; /*la mano indica elementos pulsables*/
+}
+
+/*los tres estados del boton: 1 HOVER*/
+.boton button:hover {
+    background-color: #a8490e;
+}
+
+/*los tres estados del boton: 2 active*/
+.boton button:active {
+    background-color: #8a3b0b;
+}
+
+/*los tres estados del boton: 3 focus*/
+.boton button:focus {
+    outline: 2px solid #f5c518;
+    outline-offset: 2px;
+}
