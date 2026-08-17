@@ -464,7 +464,7 @@ form input:invalid:not(:placeholder-shown){
     color: white;
     padding: 12px, 24px;
     border: none;
-    border-radius: 6px;
+    border-radius: 16px;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
@@ -476,7 +476,7 @@ form input:invalid:not(:placeholder-shown){
     background-color: #a8490e;
 }
 
-/*los tres estados del boton: 2 active*/
+/*los tres estados del boton: 2 active, aun más oscuro mientras se pulsa*/
 .boton button:active {
     background-color: #8a3b0b;
 }
@@ -485,4 +485,9 @@ form input:invalid:not(:placeholder-shown){
 .boton button:focus {
     outline: 2px solid #f5c518;
     outline-offset: 2px;
+}
+
+/*variante secundaria*/
+.boton-secundario button {
+    background-color: #6b7280;
 }
