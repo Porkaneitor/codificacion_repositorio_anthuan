@@ -459,12 +459,12 @@ form input:invalid:not(:placeholder-shown){
  } /*los (small) acompaños a los campos con los textos minimo 8 caracteres, entre 1 y 8 sesiones, ect*/
 
  /*estilizar el boton con estados*/
-.boton button {
+.boton, .boton-secundario {
     background-color: #c55a11;
     color: white;
     padding: 12px, 24px;
     border: none;
-    border-radius: 16px;
+    border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
@@ -472,22 +472,26 @@ form input:invalid:not(:placeholder-shown){
 }
 
 /*los tres estados del boton: 1 HOVER*/
-.boton button:hover {
+.boton:hover {
     background-color: #a8490e;
 }
 
 /*los tres estados del boton: 2 active, aun más oscuro mientras se pulsa*/
-.boton button:active {
+.boton:active {
     background-color: #8a3b0b;
 }
 
 /*los tres estados del boton: 3 focus*/
-.boton button:focus {
+.boton:focus {
     outline: 2px solid #f5c518;
     outline-offset: 2px;
 }
 
 /*variante secundaria*/
-.boton-secundario button {
+.boton-secundario {
     background-color: #6b7280;
+}
+
+.boton-secundario:hover {
+    background-color: #4d5563;
 }
