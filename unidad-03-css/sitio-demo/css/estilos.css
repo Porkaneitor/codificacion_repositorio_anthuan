@@ -561,3 +561,16 @@ form input:invalid:not(:placeholder-shown){
 .etiqueta {
     animation: pulso 2s ease-out infinite;
 }
+
+/*aplicacion de filtros*/
+.galeria-grid img:hover {
+   /* filter: grayscale(0);
+    filter: blur(2px);
+    filter: brightness(1.2);
+    filter: contrast(1.5);
+    filter: saturate(2);
+    filter: sepia(60%);
+    filter: invert(0%);
+    filter: opacity(20%); */
+    filter: grayscale(100%) brightness(1.1);
+}
