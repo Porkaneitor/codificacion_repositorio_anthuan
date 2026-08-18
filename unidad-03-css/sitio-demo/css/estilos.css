@@ -148,7 +148,7 @@ nav li {
     align-items: flex-end; acomoda abajo
     align-items: center; acomoda centro */
     align-items: baseline; /*acomoda por la linea de texto*/
-    top: 0px;
+    top: -10px;
     left: 0px;
     width: 100%;
     background-image: url(../recursos/fondo1.avif);
