@@ -369,7 +369,7 @@ escala de valores de z-index
     /*grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-template-columns: 1fr 3fr; la primera doble que las otras*/
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50;
 }
 
