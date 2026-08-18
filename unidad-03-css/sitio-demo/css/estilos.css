@@ -521,5 +521,11 @@ form input:invalid:not(:placeholder-shown){
 .tarjeta figure:hover {
     transform: translatey(-5px);
     box-shadow: 0 8px 20px  rgba(0, 0, 0, 0.15);
+    transform: scale(1.03); /*escala acorde al tamaño original*/
+    transform: scale(1.1, 0.9); /*primer valor: X, segundo valor Y*/
+    transform: translateY(-5px); /*desplazar, en negativo lleva a la dirección opuesto*/
+    transform: rotate(5deg); /*girar por grados*/
+    transform: skew(10deg); /*inclinar por grados*/
+    transform:  translateY(-5px) scale(1.03);
 }
 
