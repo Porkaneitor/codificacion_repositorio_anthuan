@@ -316,6 +316,10 @@ sticky: fluye normal hasta llegar a un umbral y entonces se pega.*/
     position: relative; /*posiciona como elemento padre general y este no se mueve, es referencia de hijos absolutos*/
 }
 
+.figura-destacada:hover .etiqueta {
+    transform: scale(1.1) rotate(-3deg);
+}
+
 .etiqueta {
     position: absolute;
     top: 20px;
