@@ -99,7 +99,13 @@ header nav a {
     font-size: 0.9rem;
     text-decoration: none;
     padding: 10px 15px;
-}
+    color: #dce6f1;
+    margin-right: 15px;
+    transition: color 0.3s; 
+} /*linear
+    easy-in
+    easy-out
+    easy-in-out*/
 
 header nav {
     align-self: center;
@@ -310,6 +316,10 @@ sticky: fluye normal hasta llegar a un umbral y entonces se pega.*/
     position: relative; /*posiciona como elemento padre general y este no se mueve, es referencia de hijos absolutos*/
 }
 
+.figura-destacada:hover .etiqueta {
+    transform: scale(1.1) rotate(-3deg);
+}
+
 .etiqueta {
     position: absolute;
     top: 20px;
@@ -498,6 +508,10 @@ form input:invalid:not(:placeholder-shown){
     background-color: #4d5563;
 }
 
+.boton {
+    transition: background-color 0.3 ease;
+}
+
 .tarjeta {
     background: white;
     padding: 20px;
@@ -511,4 +525,52 @@ form input:invalid:not(:placeholder-shown){
 .tarjeta figure:hover {
     transform: translatey(-5px);
     box-shadow: 0 8px 20px  rgba(0, 0, 0, 0.15);
+    transform: scale(1.03); /*escala acorde al tamaño original*/
+    transform: scale(1.1, 0.9); /*primer valor: X, segundo valor Y*/
+    transform: translateY(-5px); /*desplazar, en negativo lleva a la dirección opuesto*/
+    transform: rotate(5deg); /*girar por grados*/
+    transform: skew(10deg); /*inclinar por grados*/
+    transform:  translateY(-5px) scale(1.03);
+}
+
+/*definir la transición*/
+@-o-keyframes aparecer {
+    from{
+        opacity: 0;
+        transform: translateY(20);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarjeta {
+    animation: aparecer 0.6s ease-out;
+}
+
+@keyframes pulso {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.etiqueta {
+    animation: pulso 2s ease-out infinite;
+}
+
+/*aplicacion de filtros*/
+.galeria-grid img:hover {
+   /* filter: grayscale(0);
+    filter: blur(2px);
+    filter: brightness(1.2);
+    filter: contrast(1.5);
+    filter: saturate(2);
+    filter: sepia(60%);
+    filter: invert(0%);
+    filter: opacity(20%); */
+    filter: grayscale(100%) brightness(1.1);
 }
