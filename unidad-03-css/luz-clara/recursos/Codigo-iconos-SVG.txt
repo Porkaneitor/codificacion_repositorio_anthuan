@@ -20,7 +20,7 @@
             <path d="M6 40 C6 29 13 24 22 24 C31 24 38 29 38 40 Z" fill="currentColor"/>
           </svg>
 
-<!-- LOGO EN SVG 3-Producto · dibujado con código, no es una imagen -->
+<!-- código EN SVG 3-Producto · dibujado con código, no es una imagen -->
           <svg class="tarjeta-icono" width="44" height="44" viewBox="0 0 44 44"
                xmlns="http://www.w3.org/2000/svg" role="img"
                aria-label="Icono de producto">
@@ -29,7 +29,7 @@
             <rect x="17" y="24" width="10" height="14" fill="#FFFFFF"/>
           </svg>
 
-<!-- LOGO EN SVG 4-Eventos · dibujado con código, no es una imagen -->
+<!-- código EN SVG 4-Eventos · dibujado con código, no es una imagen -->
 
           <svg class="tarjeta-icono" width="44" height="44" viewBox="0 0 44 44"
                xmlns="http://www.w3.org/2000/svg" role="img"
