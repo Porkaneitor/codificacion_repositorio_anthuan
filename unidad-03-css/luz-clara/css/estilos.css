@@ -57,3 +57,12 @@ html {
 
     scroll-behavior: smooth; /*salto suave al usar navegación con anclas*/
 }
+
+body {
+    font-size: 1.6rem; /*si no se agrega esta linea el texto no toma el valor de los 16px base y quedaria un texto casi ilegible*/
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    color: var(--color-tinta);
+    background-color: var(--color-fondo);
+    
+}
