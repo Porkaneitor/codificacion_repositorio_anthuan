@@ -104,5 +104,4 @@ img {
 .seccion-alterna {
     background-color: var(--color-fondo-alt);
     max-width: none; /*se anula el ancho maximo para que el fondo ocupe todo el ancho de la pantalla*/
-
 }
