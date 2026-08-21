@@ -35,8 +35,8 @@ ancestro de todos. Todos los elementos del documento lo pueden usar*/
 /*OTROS ELEMENTOS*/
 --radio: 0.6rem; /*6px*/
 --sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 06); /*apenas separado*/
---sombra-1: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
---sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
+--sombra-2: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
+--sombra-3: 0 0.6rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
 --transicion: 0.25s ease;
 --ancho-max: 120rem; /*1200px*/
 }
@@ -70,13 +70,13 @@ body {
 /*JERARQUIA TITULOS*/
 h1, h2, h3 {
     font-family: var(--fuente-titulo);
-    line-height: 1.2;
+    line-height: 1.2rem;
     color: var(--color-marca);
 }
 
 h1 {font-size: 4.8rem;}
-h1 {font-size: 3.2rem;}
-h1 {font-size: 2.0rem;}
+h2 {font-size: 3.2rem;}
+h3 {font-size: 2.0rem;}
 
 p {
     margin-bottom: var(--esp-sm);
@@ -104,4 +104,307 @@ img {
 .seccion-alterna {
     background-color: var(--color-fondo-alt);
     max-width: none; /*se anula el ancho maximo para que el fondo ocupe todo el ancho de la pantalla*/
+}
+
+.seccion-alterna > * {
+    max-width: var(--ancho-max);
+    margin-left: auto;
+    margin-right: auto; /*el contenido de esta seccion se limita y se centra. el selecto < significa "hijo directo"
+    alcanza solo el primer elementos no sus nietos*/
+}
+
+.seccion-titulo {
+    margin-bottom: var(--esp-sm);
+    text-align: center;
+}
+
+.seccion-entrada {
+    max-width: 65ch; /*el CH equivale al ancho del caracter "0"" de la fuente en uso, son 65 caracteres por linea maximo para una lectura más comoda*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--esp-lg);
+    text-align: center;
+    color: var(--color-suave);
+}
+
+.pagina-encabezado {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: var(--esp-xl) var(--esp-md) var(--esp-lg);  /*tres valores: arriba, lados y abajo*/
+    text-align: center;
+}
+
+.pagina-titulo {
+    margin-bottom: var(--esp-xs);
+}
+
+.pagina-bajada {
+    color: var(--color-suave);
+    font-size: 1.8rem;
+}
+
+.subtitulo {
+    margin-top: var(--esp-md);
+    margin-bottom: var(--esp-xs);
+}
+
+/*CABECERA Y MENU*/
+.cabecera {
+    display: flex; /*activa FLEXBOX*/
+    justify-content: space-between; /*coloca el primer elemento al inicio y el segundo al final*/
+    align-items: center;
+    padding: var(--esp-sm) var(--esp-md);
+    border: 0.1rem solid var(--color-linea);
+    position: sticky;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    color: var(--color-marca);
+}
+
+.logo:hover .logo-icono {
+    transform: rotate(8deg); /*se activa cuando el curso pasa sobre el elemento*/
+}
+
+.logo-texto {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    gap: var(--esp-sm);
+    list-style: none;
+}
+
+.menu-enlace {
+    display: inline-block; /*esta linea permite aplicar relleno vertical*/
+    padding: var(--esp-xs) var(--esp-sm);
+    color: var(--color-tinta);
+    font-weight: 600;
+    border-radius: var(--radio);
+    transition: background-color var(--transicion), color var(--transicion);
+
+}
+
+.menu-enlace:hover {
+    background-color: var(--color-fondo-alt);
+    color: var(--color-marca);
+}
+
+.menu-enlace:focus {
+    outline: 0.2rem solid var(--color-acento);
+    outline-offset: 0.2rem; /*se activa al llegar al enlace con la tecla tab*/
+}
+
+.menu-enlace.activo { /*dos clases del mismo elemento. el elemento que tenga las 2 clases es la marca de la pagina actual o activa*/
+    color: var(--color-acento);
+}
+
+/*PORTADA
+*aqui va ir la imagen de fondo*/
+.portada {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url('../recursos/portada.webp');
+    background-color: var(--color-marca);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /*si la imagen fuera más pequeña que el contenedor no se repetiria*/
+    padding: var(--esp-md);
+    min-height: 55rem;
+}
+
+.portada-caja {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: var(--esp-lg);
+    border-radius: var(--radio);
+    max-width: 70rem;
+}
+
+.portada-titulo {
+    color: var(--color-blanco);
+    margin-bottom: var(--esp-sm);
+}
+
+.portada-bajada {
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    margin-bottom: var(--esp-md);
+}
+
+/*SERVICIOS - FLEXBOX*/
+.fila-servicios {
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    display: flex;
+    flex: 1 1 30rem; /*1 FLEX-GROW: si sobra espacio crece 2 FLEX-SHRINK: si falta espacio se encoge 3 FLEX-BASIS: parte de un tamaño base 30rem=300*/
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    text-align: center;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-icono {
+    color: var(--color-acento); margin: 0 auto;
+}
+
+.tarjeta-titulo {
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta-texto {
+    color: var(--color-suave);
+    flex-grow: 1; /*FLEX-GROW: en 1 hace que el parrafo absorba todo el espacio vertical sobrante de la tarjeta*/
+}
+
+.tarjeta-precio {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-marca);
+    margin-bottom: 0;
+    padding-top: var(--esp-sm);
+    border-top: 0.1rem solid var(--color-linea);
+}
+
+/*GALERIA . CSS GRID
+GRID: dos dimensiones, cuadricula, fila  y columnas*/
+.rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /*se lee de adentro hacia afuera: (minmax(28rem, 1fr): cada columna mide 280px y como maximo una fracción
+    del espacio disponible) (repeat(auto-fit): crea tantas como entren en la medida) (JUNTOS): pone todas las columnas que entren en 280px y reparte el espacio sobrante
+    sobrante entre ellas.*/
+    gap: var(--esp-sm);
+}
+
+.galeria-pieza {
+    position: relative; /*no mueve el elemento solo la declara como un punto de referencia para los hijos*/
+    overflow: hidden; /*recorta lo que se salga de los limites del elemento y tmb permite que la imagen se transforme con hover sin invadir a los otros elementos*/
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+}
+
+.galeria-pieza {
+    grid-column: spam 2; /*ocupa 2 columnas*/
+    grid-row: span 2; /*ocupa 2 filas*/
+}
+
+.galeria-pieza img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*recorta la imagen por el centro para no deformarla*/
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(60%); /*el filtro quita el 60% del color de la imagen*/
+}
+
+.galeria-pieza:hover img {
+    transform: scale(1.6);
+    filter: grayscale(0); /*recupera el color de la imagen*/
+}
+
+.galeria-pie {
+    position: absolute;
+    bottom: 0;
+    right: 0; /*se ubica con respecto al ancestro más cercano con posición relativa*/
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-blanco);
+    padding: var(--esp-xs);
+    font-size: 1.3rem;
+    text-align: center;
+    transform: translateY(100%); /*desplaza hacia abajo 100% de su propia altura*/
+    transition: tranform var(--transicion);
+}
+
+.galeria-pieza:hover .galeria-pie {
+    transform: translateY(0); /*el pie de foto vuelve a su posición deslizandose desde abajo*/
+}
+
+/*EQUIPO*/
+.rejilla-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit) minmax(24rem, 1fr);
+    gap: var(--esp-md);
+}
+
+.ficha {
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+    text-align: center;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.ficha-foto {
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto var(--esp-md);
+    border: 0.3rem solid var(--color-fondo-alt);
+}
+
+.ficha-nombre {
+    margin-bottom: 0.2rem;
+}
+
+.ficha-rol {
+    color: var(--color-acento);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    margin-bottom: var(--esp-xs);
+}
+
+.ficha-texto {
+    color: var(--color-suave);
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+/*DOS COLUMNAS*/
+.dos-columnas {
+    display: flex;
+    gap: var(--esp-lg);
+    flex: wrap;
+    align-items: flex-start;
+}
+
+.columna-texto {
+    flex: 1 1 32rem;
+}
+
+.columna-imagen {
+    flex: 1 1 32rem;
+    margin: 0;
+}
+
+.columna-imagen {
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    width: 100%;
+}
+
+.imagen-pie {
+    margin-top: var(--esp-xs);
+    font-size: 1,3rem;
+    color: var(--color-suave);
+    text-align: center;
+    font-style: italic;
 }
