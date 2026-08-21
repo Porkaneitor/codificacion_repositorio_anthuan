@@ -35,8 +35,8 @@ ancestro de todos. Todos los elementos del documento lo pueden usar*/
 /*OTROS ELEMENTOS*/
 --radio: 0.6rem; /*6px*/
 --sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 06); /*apenas separado*/
---sombra-1: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
---sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
+--sombra-2: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
+--sombra-3: 0 0.2rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
 --transicion: 0.25s ease;
 --ancho-max: 120rem; /*1200px*/
 }
@@ -219,7 +219,7 @@ img {
     background-position: center;
     background-repeat: no-repeat; /*si la imagen fuera más pequeña que el contenedor no se repetiria*/
     padding: var(--esp-md);
-    min-height: 55rem;
+    min-height: 0.5rem;
 }
 
 .portada-caja {
@@ -238,4 +238,45 @@ img {
     color: var(--color-blanco);
     font-size: 1.8rem;
     margin-bottom: var(--esp-md);
+}
+
+/*SERVICIOS - FLEXBOX*/
+.fila-servicios {
+    display: flex;
+    gap: var(--esp-md);
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    display: flex;
+    flex: 1 1 30rem; /*1 FLEX-GROW: si sobra espacio crece 2 FLEX-SHRINK: si falta espacio se encoge 3 FLEX-BASIS: parte de un tamaño base 30rem=300*/
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+    text-align: center;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-icono {
+    color: var(--color-acento); margin: 0 auto;
+}
+
+.tarjeta-titulo {
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta-texto {
+    color: var(--color-suave);
+    flex-grow: 1; /*FLEX-GROW: en 1 hace que el parrafo absorba todo el espacio vertical sobrante de la tarjeta*/
+}
+
+.tarjeta-precio {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-marca);
+    margin-bottom: 0;
+    padding-top: var(--esp-sm);
+    border-top: 0.1rem solid var(--color-linea);
 }
