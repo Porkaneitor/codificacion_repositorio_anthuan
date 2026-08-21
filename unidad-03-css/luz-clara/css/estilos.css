@@ -283,7 +283,7 @@ img {
 
 /*GALERIA . CSS GRID
 GRID: dos dimensiones, cuadricula, fila  y columnas*/
-.rejilla.galeria {
+.rejilla-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /*se lee de adentro hacia afuera: (minmax(28rem, 1fr): cada columna mide 280px y como maximo una fracción
     del espacio disponible) (repeat(auto-fit): crea tantas como entren en la medida) (JUNTOS): pone todas las columnas que entren en 280px y reparte el espacio sobrante
@@ -296,4 +296,41 @@ GRID: dos dimensiones, cuadricula, fila  y columnas*/
     overflow: hidden; /*recorta lo que se salga de los limites del elemento y tmb permite que la imagen se transforme con hover sin invadir a los otros elementos*/
     border-radius: var(--radio);
     box-shadow: var(--sombra-1);
+}
+
+.galeria-pieza {
+    grid-column: span 2; /*ocupa 2 columnas*/
+    grid-row: span 2; /*ocupa 2 filas*/
+}
+
+.galeria-pieza img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*recorta la imagen por el centro para no deformarla*/
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(60%); /*el filtro quita el 60% del color de la imagen*/
+}
+
+.galeria-pieza:hover img {
+    transform: scale(1.6);
+    filter: grayscale(0); /*recupera el color de la imagen*/
+}
+
+.galeria-pie {
+    position: absolute;
+    bottom: 0;
+    right: 0; /*se ubica con respecto al ancestro más cercano con posición relativa*/
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-blanco);
+    padding: var(--esp-xs);
+    font-size: 1.3rem;
+    text-align: center;
+    transform: translateY(100%); /*desplaza hacia abajo 100% de su propia altura*/
+    transition: tranform var(--transicion);
+}
+
+.galeria-pieza:hover .galeria-pie {
+    transform: translateY(0); /*el pie de foto vuelve a su posición deslizandose desde abajo*/
+    
 }
