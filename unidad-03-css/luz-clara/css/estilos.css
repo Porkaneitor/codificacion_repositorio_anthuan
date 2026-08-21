@@ -188,7 +188,7 @@ img {
     color: var(--color-tinta);
     font-weight: 600;
     border-radius: var(--radio);
-    transition: background-color var(--transicion), color: var(--transicion);
+    transition: background-color var(--transicion), color var(--transicion);
 
 }
 
@@ -198,10 +198,44 @@ img {
 }
 
 .menu-enlace:focus {
-    outline: 2rem solid var(--color-acento);
+    outline: 0.2rem solid var(--color-acento);
     outline-offset: 0.2rem; /*se activa al llegar al enlace con la tecla tab*/
 }
 
 .menu-enlace.activo { /*dos clases del mismo elemento. el elemento que tenga las 2 clases es la marca de la pagina actual o activa*/
     color: var(--color-acento);
+}
+
+/*PORTADA
+*aqui va ir la imagen de fondo*/
+.portada {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url('../recursos/portada.webp');
+    background-color: var(--color-marca);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /*si la imagen fuera más pequeña que el contenedor no se repetiria*/
+    padding: var(--esp-md);
+    min-height: 55rem;
+}
+
+.portada-caja {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: var(--esp-lg);
+    border-radius: var(--radio);
+    max-width: 70rem;
+}
+
+.portada-titulo {
+    color: var(--color-blanco);
+    margin-bottom: var(--esp-sm);
+}
+
+.portada-bajada {
+    color: var(--color-blanco);
+    font-size: 1.8rem;
+    margin-bottom: var(--esp-md);
 }
