@@ -70,7 +70,7 @@ body {
 /*JERARQUIA TITULOS*/
 h1, h2, h3 {
     font-family: var(--fuente-titulo);
-    line-height: 1.2;
+    line-height: 1.2rem;
     color: var(--color-marca);
 }
 
@@ -146,4 +146,62 @@ img {
 .subtitulo {
     margin-top: var(--esp-md);
     margin-bottom: var(--esp-xs);
+}
+
+/*CABECERA Y MENU*/
+.cabecera {
+    display: flex; /*activa FLEXBOX*/
+    justify-content: space-between; /*coloca el primer elemento al inicio y el segundo al final*/
+    align-items: center;
+    padding: var(--esp-sm) var(--esp-md);
+    border: 0.1rem solid var(--color-linea);
+    position: sticky;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-xs);
+    color: var(--color-marca);
+}
+
+.logo:hover .logo-icono {
+    transform: rotate(8deg); /*se activa cuando el curso pasa sobre el elemento*/
+}
+
+.logo-texto {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    gap: var(--esp-sm);
+    list-style: none;
+}
+
+.menu-enlace {
+    display: inline-block; /*esta linea permite aplicar relleno vertical*/
+    padding: var(--esp-xs) var(--esp-sm);
+    color: var(--color-tinta);
+    font-weight: 600;
+    border-radius: var(--radio);
+    transition: background-color var(--transicion), color: var(--transicion);
+
+}
+
+.menu-enlace:hover {
+    background-color: var(--color-fondo-alt);
+    color: var(--color-marca);
+}
+
+.menu-enlace:focus {
+    outline: 2rem solid var(--color-acento);
+    outline-offset: 0.2rem; /*se activa al llegar al enlace con la tecla tab*/
+}
+
+.menu-enlace.activo { /*dos clases del mismo elemento. el elemento que tenga las 2 clases es la marca de la pagina actual o activa*/
+    color: var(--color-acento);
 }
