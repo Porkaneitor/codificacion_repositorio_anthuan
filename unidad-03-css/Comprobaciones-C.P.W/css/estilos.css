@@ -30,7 +30,7 @@ a {
     background-color: bisque;
     padding: 5px;
     color: black;
-    box-shadow: 1rem;
+    box-shadow: 2px;
 }
 
 #body {
@@ -50,7 +50,7 @@ a {
     padding: 0%;
     margin: 2rem;
     background-color: burlywood;
-    box-shadow: 1rem;
+    box-shadow: 2px;
 }
 
 .menu-principal {
@@ -119,7 +119,6 @@ ul {
 #categorias {
     display: flex;
     flex-direction: column;
-    align-items: left;
 }
 
 #pie {
@@ -134,14 +133,16 @@ ul {
 
 .datos-contacto a{
     background-color: burlywood;
-    align-items: left;
     display: flex;
     flex-direction: column;
 }
 
 .boton {
     background-color: burlywood;
-    transform: scale(5rem);
+}
+
+.boton:hover {
+    transform: scale(2.5);
 }
 
 .cita {
@@ -156,6 +157,8 @@ ul {
 }
 
 .lista-categorias {
+    display: flex;
+    justify-content: space-around;
     background-color: bisque;
     padding: 5px;
 }
