@@ -30,7 +30,7 @@ a {
     background-color: bisque;
     padding: 5px;
     color: black;
-    box-shadow: 2px;
+    box-shadow: 0px;
 }
 
 #body {
@@ -50,7 +50,7 @@ a {
     padding: 0%;
     margin: 2rem;
     background-color: burlywood;
-    box-shadow: 2px;
+    box-shadow: 0px;
 }
 
 .menu-principal {
