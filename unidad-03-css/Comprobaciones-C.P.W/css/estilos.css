@@ -158,5 +158,83 @@ a {
     box-shadow: var(--sombra-2);
 
     display: flex;
+    flex-direction: column;
     transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta h3 {
+    margin-bottom: var(--esp-xs);
+}
+
+.tarjeta p {
+    color: var(--color-suave);
+    flex-grow: ;
+}
+
+.tarjeta-pie {
+    margin-bottom: 0;
+    padding-top: var(--esp-xs);
+    border-top: 0.1rem solid var(--color-linea);
+    color: var(--color-marca);
+    font-size: 1.5rem;
+}
+
+.tarjeta:hover {
+    transform: translateY(-0.5 rk);
+    box-shadow: var(--sombra-3);
+}
+
+#historia {
+    max-width: 70ch;
+}
+
+.cita {
+    max-width: 60rem;
+    margin:  var(--esp-md);
+    padding: var(--esp-md) ;
+    background-color: var(--color-blanco);
+    border-left: ;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-1);
+    position: relative;
+}
+
+/*pseudo elemento*/
+.cita::before {
+    content: ' ';
+    position: absolute;
+    top: 0.9rem;
+    left: 1.2;
+    font-family: var(--fuente-titulo);
+    font-size: 7rem;
+}
+
+.cita p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cita-autoria {
+    color: var(--color-suave);
+    font-size: ;
+    text-align: ;
+    font-style: normal;
+}
+
+/*CONTENIDO SECUNDARIO. ASIDE*/
+#aviso {
+.panel-aviso {
+    background-color: var(--color-fondo-alt);
+    border-left: 0.4rem solid var(--color-acento);
+    border-radius: 0 var(--radio 0) var(--radio);
+    padding: var(--esp-md);
+
+}
+}
+
+#aviso h2 {
+
+}
+
+#aviso p {
+    
 }
