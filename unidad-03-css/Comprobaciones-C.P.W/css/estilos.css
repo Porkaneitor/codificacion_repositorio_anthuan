@@ -139,126 +139,24 @@ a {
     font-size: 1.8rem;
     margin-bottom: var(--esp-xs);
     color: var(--color-fondo);
-    opacity: 0.94;reji
-
+    opacity: 0.94;
+}
 
 .rejilla-servicios {
     display: flex;
     gap: 1.28;
-
-}
-
-.tarjeta
-
-#contenido {
-    padding: 20px;
-    background-color: burlywood;
-}
-
-#portada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 1%;
-    background-color: bisque;
-}
-
-#servicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.rejilla-servicios {
-    background-color: bisque;
-    padding: 10px;
-}
-
-
-#historia {
-    margin-top: 2rem;
-}
-#pedido {
-    padding: 10px;
-    background-color: bisque;
-}
-
-ul {
-    line-height: 2rem;
-}
-
-#existencias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tabla-catalogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 3rem;
-    background-color: bisque;
-    padding: 5px;
-}
-
-#categorias {
-    display: flex;
-    flex-direction: column;
-}
-
-#pie {
-    display: flex;
-    flex-direction: column;
-}
-
-.datos-contacto {
-    display: flex;
-    flex-direction: column;
-}
-
-.datos-contacto a{
-    background-color: burlywood;
-    display: flex;
-    flex-direction: column;
-}
-
-.boton {
-    background-color: burlywood;
-}
-
-.boton:hover {
-    transform: scale(2.5);
-}
-
-.cita {
-    align-items: flex-start;
-    flex-direction: column;
-    background: bisque;
-    padding: 5px;
-    display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+
 }
 
-.lista-categorias {
+.tarjeta {
+    flex: 1 1 28rem;
+    background-color: var(--color-blanco);
+    padding: var(--esp-md);
+    border: 0.1rem solid var(--color-linea);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-2);
+
     display: flex;
-    justify-content: space-around;
-    background-color: bisque;
-    padding: 5px;
-}
-
-.glosario {
-    background-color: bisque;
-    padding: 5px;
-}
-
-.grupo-botones {
-    display: flex;
-    position: sticky;
-}
-.grupo-botones:hover {
-    transform: scalex(1.01) scaleZ(1.01);
+    transition: transform var(--transicion), box-shadow var(--transicion);
 }
