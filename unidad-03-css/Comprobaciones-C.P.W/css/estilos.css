@@ -5,6 +5,40 @@
     box-sizing: border-box;
 }
 
+:root {
+    /*paleta de colores*/
+    --color-tinta: #1a1a1a; /*texto principal. casi negro*/
+    --color-suave: #6b6b6b; /*texto secundario. pies de foto*/
+    --color-marca: #2c3e50; /*el azul del estudio*/
+    --color-acento: #c87941; /*terracota de los botones*/
+    --color-acento-osc: #a45f2e; /*terracota oscuro*/
+    --color-fondo: #f1f1f8; /*blanco roto, no blanco puro*/
+    --color-fondo-alt: #f0eee9; /*para altenar fondos secciones*/
+    --color-linea: #dddad3; /*para border y separadores*/
+    --color-blanco: #ffffff; /*blanco puro*/
+
+
+/*TIPOGRAFIA*/
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+--fuente-texto: 'Segoe UI', Arial, sans-serif;
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+
+/*ESPACIADO. conversión 1rem = 1Opx*/
+--esp-xs: 0.8rem; /*8px*/
+--esp-sm: 1.6rem; /*16px*/
+--esp-md: 2.4rem; /*24px*/
+--esp-lg: 4.0rem; /*40px*/
+--esp-xl: 8.0rem; /*80px*/
+
+/*OTROS ELEMENTOS*/
+--radio: 0.6rem; /*6px*/
+--sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 06); /*apenas separado*/
+--sombra-2: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
+--sombra-3: 0 0.6rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
+--transicion: 0.25s ease;
+--ancho-max: 120rem; /*1200px*/
+}
+
 html {
     background-color: bisque;
     font-size: 100%;
@@ -54,12 +88,34 @@ a {
 }
 
 .menu-principal {
+    font-weight: 600;
+    border-radius: var(--radio);
     line-height: 1.5rem;
     margin-left: 3rem;
 }
+
+.menu-principal a {
+    display: inline-block;
+    padding: var(--esp-xs) var(--esp-sm);
+}
 .menu-principal ul {
-    line-height: 2rem;
-    margin-left: 3rem;
+    display: flex;
+    gap: var(--esp-xs);
+    list-style: none;
+}
+
+.menu-principal a:hover {
+    background-color: var(--color-fondo-alt);
+    color: var(--color-marca);
+}
+.menu-principal a:focus {
+    outline: 0.2rem solid var(--color-acento);
+    outline-offset: 0.2rem;
+}
+
+.menu-principal .enlace-activo {
+    background-color: var(--color-fondo-alt);
+    color: var(--color-acento);
 }
 
 #contenido {
