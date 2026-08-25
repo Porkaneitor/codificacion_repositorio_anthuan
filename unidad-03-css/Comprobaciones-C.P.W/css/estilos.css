@@ -232,9 +232,50 @@ a {
 }
 
 #aviso h2 {
-
+    font-size: 2.2rem;
+    margin-bottom: var(--esp-xs);
 }
 
 #aviso p {
-    
+    margin-bottom:  0;
+}
+
+.boton {
+    display: inline-block;
+    padding: var(--esp-xs) var(md);
+}
+
+.volver {
+    text-align: center;
+    margin-top: var(--esp-lg);
+}
+
+.volver a {
+    font-size: 1.4rem;
+    color: var(--color-suave);
+    border-bottom: o.1rem solid var(--color-linea);
+    transition: color var(--transicion) border-color var(--transicion)
+}
+
+.volver a:hover {
+    color: var(--color-acento);
+    border-bottom: color var(--color-acento);
+}
+/*PIE*/
+#pie {
+    background-color: var(--color-fondo);
+}
+
+.pie-contacto {
+    max-width: var(--ancho-max);
+}
+
+.datos-contacto {
+    color: var(--color-blanco);
+    border-bottom: 0.1rem solid rgba(55, 55, blue, alpha);
+    transition: border-color ;
+}
+
+.creditos {
+    grid-column:  1/ .1;
 }
