@@ -245,6 +245,11 @@ a {
     padding: var(--esp-xs) var(md);
 }
 
+.boton-principal {
+    background-color: var(--color-acento);
+    transform: translateY(0);
+}
+
 .volver {
     text-align: center;
     margin-top: var(--esp-lg);
