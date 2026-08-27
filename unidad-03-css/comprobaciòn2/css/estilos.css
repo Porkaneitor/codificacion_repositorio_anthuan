@@ -1,0 +1,263 @@
+/*ESTILOS CSS*/
+
+/*RESET*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 62.5%;}
+
+body {
+    font-size: 1,6rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: lightblue;
+}
+
+h1,h2,h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+    color: #1f4e79;
+}
+
+h1 {font-size: 4rem;} h2 { font-size: 3rem; } h3 { font-size: 2rem; }
+
+p { margin-bottom: 1.6rem; }
+
+a { color: var(--marca) }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root {
+    --marca: #1f4e79;
+    --linea: #dddddd;
+    --acento: #c55a11;
+    --suave: #6B7280;
+    --tinta: #333333;
+    --fondo: #FAFAF8;
+
+    --radio: 0.6rem;
+    --sombra: 0. .4rem 1.2rem rgba(0,0,0,.1);
+    --esp-sm: 1.6rem;
+    --esp-md: 2.4rem;
+    --esp-lg: 4rem;
+}
+
+#cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-lg);
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    margin: 0 auto;
+    max-width: fit-content;
+    background-color: #ddd;
+    padding: 1rem 15rem 1rem 15rem;
+    border: 1rem solid var(--marca);
+    border-radius: var(--radio);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--sombra);
+}
+
+#principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    max-width: max-content;
+    position: sticky;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1rem solid #ddd;
+    padding: 5rem;
+    border-radius: var(--radio);
+    background-color: white;
+}
+
+.navegacion {
+    color: var(--marca);
+    padding: 0.2rem;
+    line-height: 3rem;
+    border: #1f4e79;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+#bienvenida {
+    border: 0.8rem solid #ddd;
+    padding: 1rem;
+    border-radius: var(--radio);
+}
+
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1rem;
+    border: 0.8rem solid #ddd;
+    padding: 1rem;
+    border-radius: var(--radio);
+}
+
+.bloque {
+    border-top: 0.2rem solid #1f4e79;
+    padding-top: 1rem;
+}
+
+.bloques-servicio {
+    margin-top: 1rem;
+}
+
+#origen {
+    margin-top: 3rem;
+}
+
+#grupos {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    border: 0.8rem solid #ddd;
+    padding: 1rem;
+    border-radius: var(--radio);
+    margin-left: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#encargo {
+    margin-top: 1rem;
+    border: 0.8rem solid #ddd;
+    padding: 1rem;
+    border-radius: var(--radio);
+}
+
+.recuadro-nota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1rem solid #ddd;
+    padding-top: 1rem;
+}
+
+#pie {
+    border-top: 1rem solid #ddd;
+    padding-top: 1rem;
+}
+
+/*TABLA*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+th, td {
+    padding: 1.2rem;
+    border-bottom: 1rem solid #ddd;
+    text-align: left;
+}
+
+thead th {
+    background: var(--marca);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+tbody tr:nth-child(even) { background: #f5f7fa; }
+tbody tr:hover { background: #e3eef9; }
+tbody td { background: #f5f7fa; ;font-style: italic; border-top: .2rem solid var(--marca); }
+
+/*FORMULARIO*/
+fieldset {
+    border: 1rem solid #ddd0;
+    border-radius: 6rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: #fff;
+}
+
+legend {padding: 0 .8rem;
+font-weight: 700;
+color: var(--marca);
+}
+
+label {
+    display: block;
+    margin-bottom: 5rem;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 1rem 1.4rem;
+    border: 1rem solid #ddd;
+    border-radius: 6rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--acento);
+    box-shadow: 0 0 0 .3rem rgba(197, 90, 17, 18);
+}
+
+input[type="radio"] input[type="checkbox"] {
+    width: auto;
+    accent-color: var(--acento);
+    cursor: pointer;
+}
+
+.boton {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 6rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--acento);
+    color: #fff;
+    transition: background-color .25s ease, transform .25s ease;
+}
+
+.boton:hover {
+    background: #a8490e;
+    transform: translateY(-.2rem);
+}
+
+.boton:active { transform: translateY(0); }
+
+.boton:focus {
+    outline: 2rem solid var(--marca); outline-offset: 2rem;
+}
+
+@keyframes aparecer {
+    from {opacity: 0; transform:  translateY(2rem);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.x { animation: aparecer .6s ease-out backwards; }
+
+.x:nth-child(2) { animation-delay: .15s; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important; 
+    }
+}
