@@ -1946,10 +1946,11 @@ img {
         está el foco */
 
 
-@media ( max-width: 768px ) 
-  .cabecera  {
+@media ( max-width: 768px ) {
+  .cabecera {
     flex-direction: column;
   }
+}
 
 h1 {font-size: 3.2rem;}
 h2 {font-size: 4.0rem;}
