@@ -1946,8 +1946,8 @@ img {
         está el foco */
 
 
-@media ( max-width: 768px ) {
-  .cabecera } {
+@media ( max-width: 768px ) 
+  .cabecera  {
     flex-direction: column;
   }
 
