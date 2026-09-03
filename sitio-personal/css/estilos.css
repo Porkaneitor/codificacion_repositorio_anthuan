@@ -1,0 +1,78 @@
+:root {
+    /*paleta de colores*/
+    --color-tinta: #1a1a1a;
+    --color-suave: #6b6b6b;
+    --color-marca: #17493a;
+    --color-acento: #b2da73;
+    --color-acento-osc: #1b6935;
+    --color-fondo: #397e7e;
+    --color-fondo-alt: #c2d3d1;
+    --color-linea: #82b8a7;
+    --color-blanco: #ffffff;
+
+
+/*tipografía*/
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+--fuente-texto: 'Segoe UI', Arial, sans-serif;
+--fuente-titulo: Georgia, 'Times New Roman', serif;
+
+/*ESPACIADO. conversión 1rem = 1Opx*/
+--esp-xs: 0.8rem; /*8px*/
+--esp-sm: 1.6rem; /*16px*/
+--esp-md: 2.4rem; /*24px*/
+--esp-lg: 4.0rem; /*40px*/
+--esp-xl: 8.0rem; /*80px*/
+
+/*OTROS*/
+--radio: 0.6rem; /*6px*/
+--sombra-1: 0 0.2rem 0, 0.6rem rgba(0,0,0, 06); /*apenas separado*/
+--sombra-2: 0 0.4rem 0, 1.2rem rgba(0,0,0, 10); /*tarjetas*/
+--sombra-3: 0 0.6rem 0, 0.6rem rgba(0,0,0, 16); /*elementos elevados*/
+--transicion: 0.25s ease;
+--ancho-max: 120rem; /*1200px*/
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 60rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: var(--color-fondo);
+  padding: 5px;
+}
+
+textarea {
+  font: inherit;
+  resize: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
