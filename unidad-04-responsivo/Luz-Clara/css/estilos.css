@@ -1969,6 +1969,59 @@ h2 {font-size: 2.8rem;}
   padding: var(--esp-lg);
 }
 
+.menu-enlace {
+  display: inline-block;
+  padding: var(--esp-xs) var(--esp-sm);
+}
+
+.menu-texto {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@media print {
+  /*QUITAR LO QUE NO SIRVE EN EL PAPEL*/
+  .cabecera,
+  .menu-boton,
+  .boton,
+  .pie,
+  .volver-arriba,
+  .fila-etiquetas {
+    display: none;
+  }
+}
+
+/*AHORRAR TINTA*/
+body {
+  background-color: var(--color-blanco);
+  color: var(--color-tinta);
+  font-size: 11pt;
+}
+
+.seccion,
+.seccion-alterna {
+  background: none;
+  padding: 0;
+  max-width: none;
+}
+
+.tarjeta,
+.ficha,
+figure,
+.tabla {
+  page-break-inside: avoid;
+}
+
+h1,h2,h3 {
+  page-break-after: avoid;
+}
+
+/*mostrar los enlaces de navegación*/
+main a::after {
+  content: " (" attr(href) ")";
+  font-size: 0.9em;
+  color: #555;
+}
 /*a partir de los 1024px - vista de escritorio*/
 @media (min-width: 1024px) {
 h1 { font-size: 4.8rem; } /*h1 recupera el tamaño original*/
