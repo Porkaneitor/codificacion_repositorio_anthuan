@@ -200,9 +200,9 @@ h1, h2, h3 {
   color: var(--color-marca);
 }
 
-h1 { font-size: 4.8rem; }   /* 48px */
-h2 { font-size: 2.4rem; }   /* 32px */
-h3 { font-size: 2.0rem; }   /* 20px */
+h1 { font-size: 3.2rem; }   /* 32px */
+h2 { font-size: 2.4rem; }   /* 24px */
+h3 { font-size: 1.6rem; }   /* 16px */
 /* OJO: Los tamaños guardan PROPORCIÓN entre sí: cada nivel es
    notoriamente más pequeño que el anterior. Elegir números al azar
    —por ejemplo 48, 44 y 40— produce una página donde no se distingue
@@ -1945,22 +1945,24 @@ img {
      4. Recorrer el sitio con la tecla Tab: debe verse siempre dónde
         está el foco */
 
-
-@media ( max-width: 768px ) {
+@media (min-width: 768px) {
   .cabecera {
-    flex-direction: column;
+    flex-direction: row;
+    /*la cabecera de fila a la columna*/
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--esp-md);
   }
 }
-
-h1 {font-size: 3.2rem;}
-h2 {font-size: 4.0rem;}
+h1 {font-size: 4.0rem;}
+h2 {font-size: 2.8rem;}
 
 .seccion {
-  padding: var(--esp-lg) var(--esp-sm);
+  padding: var(--esp-xl) var(--esp-md);
 }
 
 .portada-caja {
-  padding: var(--esp-lg)
+  padding: var(--esp-lg);
 }
 
 .cita {
@@ -2020,3 +2022,97 @@ main a::after {
   font-size: 0.9em;
   color: #555;
 }
+/*a partir de los 1024px - vista de escritorio*/
+@media (min-width: 1024px) {
+h1 { font-size: 4.8rem; } /*h1 recupera el tamaño original*/
+
+.portada { min-height: 55rem; } /*una portada con 50px de altura casi ocupa toda la pantalla de un celular*/
+
+.seccion { padding: var(--esp-xl) var(--esp-lg); }
+}
+
+/*CUANTOS PUNTOS DE QUIEBRE HACEN FALTA
+Para luz clara basta con dos
+
+base        hasta 768px        telefono
+768px       tableta
+1024px      escritorio */
+
+/*como se acumulan las reglas
+en una pantalla de 1200px se aplican las 3 reglas siguientes
+1. base        hasta 768px        telefono
+2. min-width: 768px (1200px es mayor que 768px)
+3. la de min-width: 1024px (1200px es mayor que 1024px)
+donde se repite una propiedad, gana la ultima.
+por eso el orden importan: de menor a mayor.
+si la regla de 1024px estuviera antes de la regla de 768px la anularia en pantallas grandes*/
+
+/*LA ESCALA COMPLETA, POR TRAMOS*/
+
+/*BASE - TELEFONO*/
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
+body { font-size: 1.6rem; }
+
+/*ESCALA - TABLETA*/
+@media (min-width: 768px) {
+  h1 { font-size: 4.0rem; }
+  h2 { font-size: 2.8rem; }
+  h3 { font-size: 1.9rem; }
+
+}
+
+/*ESCALA - ESCRITORIO*/
+@media (min-width: 1024px) {
+  h1 { font-size: 4.8rem; }
+  h2 { font-size: 3.2rem; }
+  h3 { font-size: 2.0rem; }
+  body { font-size: 2.0rem; }
+}
+
+/*LA TABLA DE CONTACTO.html*/
+.tabla-envoltorio { /*Despues de los 360px no hay forma razonable de que una tabla quepa sin perder la relación entre los datos*/
+  overflow-x: auto; /*Crea su propia barrera de desplazamiento*/
+}
+
+@media (max-width: 767px) { /*si usas max en lugar de min el query aplica directamente la parte movil, el ajuste es solamente para movil*/
+  .tabla th,
+  .tabla td {
+    padding: var(--esp-xs);
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main p {
+    max-width: 65ch;
+  }
+} /*En movil no hace falta adaptar texto de los parrafos, la pantalla lo hace. la adaptación es automática*/
+
+/*PUNTOS DE QUIEBRE
+base        hasta 768px        telefono
+768px       tableta
+1024px      escritorio */
+
+/*TABLETA. a partir de 768px
+@media (min-width: 768px) {
+cabecera e fila
+titulos más grandes
+más relleno en las secciónes}*/
+
+/*ESCRITORIO. a partir d elos 1024px
+@media (min-width: 1024px) {
+titulos a tamaño completo
+portada más alta}*/
+
+/*AJUSTES solo para pantalla pequeña
+@media (max-width: 767px) {
+celdas de la tabla más compactas}*/
+
+/*ACCESIBILIDAD DE MOVIMIENTO
+@media (prefer-reduce-motion: reduce) {
+Va siempre al final de todo, desactiva las animaciones del dispositivo en uso}*/
+
+/*ESTOS ENCABEZADOS NO SON DECORATIVOS
+quien abra esta hoja de estilos o usted mismo en 6 meses tenga una idea de como funciona y la estrategia de como se uso*/
