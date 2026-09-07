@@ -2090,10 +2090,10 @@ body { font-size: 1.6rem; }
   }
 } /*En movil no hace falta adaptar texto de los parrafos, la pantalla lo hace. la adaptación es automática*/
 
-.cita-texto {  DE QUIEBRE
+.cita-texto {}
 base        hasta 768px        telefono
 768px       tableta
-1024px      escritorio b} */
+1024px      escritorio b */
 
 /*TABLETA. a partir de 768px
 @media (min-width: 768px) {
@@ -2117,4 +2117,4 @@ Va siempre al final de todo, desactiva las animaciones del dispositivo en uso}*/
 /*ESTOS ENCABEZADOS NO SON DECORATIVOS
 quien abra esta hoja de estilos o usted mismo en 6 meses tenga una idea de como funciona y la estrategia de como se uso*/
 
-
+/*Patron column Drop en zonas de columnna
