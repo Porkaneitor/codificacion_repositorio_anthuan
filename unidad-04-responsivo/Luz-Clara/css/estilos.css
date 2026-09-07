@@ -2090,10 +2090,18 @@ body { font-size: 1.6rem; }
   }
 } /*En movil no hace falta adaptar texto de los parrafos, la pantalla lo hace. la adaptación es automática*/
 
-.cita-texto {}
-base        hasta 768px        telefono
+.cita-texto {
+  display: none; /*en movil no hace falta mostrar la cita, la pantalla es pequeña y el texto se ve mejor sin la cita*/
+}
+
+.panel-cerrar {
+  margin-top: var(--esp-md);
+  background-color: var(--color-fondo-alt);
+  color: var(--color-tinta);
+}
+/*base      hasta 768px        telefono
 768px       tableta
-1024px      escritorio b */
+1024px      escritorio*/
 
 /*TABLETA. a partir de 768px
 @media (min-width: 768px) {
