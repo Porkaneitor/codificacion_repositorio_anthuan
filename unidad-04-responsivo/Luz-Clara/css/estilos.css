@@ -2090,11 +2090,7 @@ body { font-size: 1.6rem; }
   }
 } /*En movil no hace falta adaptar texto de los parrafos, la pantalla lo hace. la adaptación es automática*/
 
-.cita-texto {
-  /**/
-}
-
-/*PUNTOS DE QUIEBRE
+.cita-texto {  DE QUIEBRE
 base        hasta 768px        telefono
 768px       tableta
 1024px      escritorio */
