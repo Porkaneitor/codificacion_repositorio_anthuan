@@ -2089,16 +2089,6 @@ body { font-size: 1.6rem; }
     max-width: 65ch;
   }
 } /*En movil no hace falta adaptar texto de los parrafos, la pantalla lo hace. la adaptación es automática*/
-
-.cita-texto {
-  display: none; /*en movil no hace falta mostrar la cita, la pantalla es pequeña y el texto se ve mejor sin la cita*/
-}
-
-.panel-cerrar {
-  margin-top: var(--esp-md);
-  background-color: var(--color-fondo-alt);
-  color: var(--color-tinta);
-}
 /*base      hasta 768px        telefono
 768px       tableta
 1024px      escritorio*/
@@ -2125,4 +2115,87 @@ Va siempre al final de todo, desactiva las animaciones del dispositivo en uso}*/
 /*ESTOS ENCABEZADOS NO SON DECORATIVOS
 quien abra esta hoja de estilos o usted mismo en 6 meses tenga una idea de como funciona y la estrategia de como se uso*/
 
-/*Patron column Drop en zonas de columnna
+@media (max-width: 1024px) {
+  .panel-boton,
+  .panel-lateral {
+    display: none;
+  }
+}
+.panel-fondo {
+  display: none;
+}
+.panel-lateral {
+  position: static;
+  transform: none;
+  width: auto;
+  height: auto;
+  padding-left: 5rem;
+  Z-index: auto;
+}
+#mosaico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: var(--esp-sm);
+  align-items: center;
+}
+
+.cita-texto {
+  display: none; /*en movil no hace falta mostrar la cita, la pantalla es pequeña y el texto se ve mejor sin la cita*/
+}
+
+.panel-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 30rem;
+  height: 100%;
+  background-color: var(--color-fondo-alt);
+  padding: var(--esp-lg) var(--esp-md);
+  box-shadow: var(--sombra-3);
+  z-index: 200;
+  transform: translateX(-100%);
+  overflow-y: auto;
+}
+
+.panel-lateral.activo {
+  transform: translateX(0);
+  transition: transform var(--transicion);
+}
+
+.panel-control {
+  position: fixed;
+  top: var(--esp-md);
+  right: var(--esp-md);
+  z-index: 300;
+  background-color: var(--color-fondo-alt);
+  color: var(--color-tinta);
+  border: 0.1rem solid var(--color-linea);
+  border-radius: var(--radio);
+  padding: var(--esp-xs) var(--esp-sm);
+  font-size: 1.4rem;
+}
+
+.panel-fondo {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.panel-control:checked ~ .panel-fondo {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.panel-boton,
+.panel-cerrar {
+  margin-top: var(--esp-md);
+  background-color: var(--color-fondo-alt);
+  color: var(--color-tinta);
+}
+
