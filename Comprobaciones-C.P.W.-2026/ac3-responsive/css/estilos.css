@@ -629,6 +629,18 @@ img {
   overflow-x: auto;
 }
 
+/* intermedio: desde aquí la cabecera y el contenido empiezan a perder espacio horizontal; se reorganizan antes de que se produzca el desborde.*/
+@media (max-width: 64rem) {
+  .cabecera {
+    gap: 1.25rem;
+  }
+
+  .menu {
+    gap: 0.5rem;
+  }
+}
+
+/* estrecho: el menú, la portada y los botones ya no caben cómodamente en una sola línea, por lo que pasan a una disposición apilada o flexible.*/
 @media (max-width: 48rem) {
   h1 { font-size: 2.5rem; }
   h2 { font-size: 1.75rem; }
@@ -667,5 +679,17 @@ img {
 
   .boton {
     flex: 1 1 10rem;
+  }
+}
+
+/* evita animaciones para usuarios que lo solicitan, independientemente del ancho de la ventana.*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
