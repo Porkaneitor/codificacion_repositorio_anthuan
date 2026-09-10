@@ -99,6 +99,11 @@ img {
   margin-bottom: 16px;
 }
 
+.seccion-testimonio {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .seccion-entrada {
   width: min(100%, 640px);
   margin-left: auto;
@@ -478,7 +483,9 @@ img {
   margin-bottom: 0;
 }
 
-.campo { margin-bottom: 18px; }
+.campo {
+  margin-bottom: 18px;
+}
 
 .campo-etiqueta {
   display: block;
@@ -629,6 +636,18 @@ img {
   overflow-x: auto;
 }
 
+/* intermedio: desde aquí la cabecera y el contenido empiezan a perder espacio horizontal; se reorganizan antes de que se produzca el desborde.*/
+@media (max-width: 64rem) {
+  .cabecera {
+    gap: 1.25rem;
+  }
+
+  .menu {
+    gap: 0.5rem;
+  }
+}
+
+/* estrecho: el menú, la portada y los botones ya no caben cómodamente en una sola línea, por lo que pasan a una disposición apilada o flexible.*/
 @media (max-width: 48rem) {
   h1 { font-size: 2.5rem; }
   h2 { font-size: 1.75rem; }

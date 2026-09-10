@@ -229,7 +229,7 @@ _(Completar conforme avanza el módulo. Se llena en las sesiones donde se elige 
 | :---------------------------------------- | :-------- | :------ |
 | Puntos de quiebre (S24)                   |           |         |
 | Patrones de diseño adaptativo (S27 y S28) |           |         |
-| Método de enlace del framework (S31)      |           |         |
+| Método de enlace del framework (S31)      |column drop |me parece apropiado para el formato movíl |
 
 ---
 
