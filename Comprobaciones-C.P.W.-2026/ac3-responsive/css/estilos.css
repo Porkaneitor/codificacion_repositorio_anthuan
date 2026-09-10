@@ -683,14 +683,3 @@ img {
     flex: 1 1 10rem;
   }
 }
-
-/* evita animaciones para usuarios que lo solicitan, independientemente del ancho de la ventana.*/
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-}
