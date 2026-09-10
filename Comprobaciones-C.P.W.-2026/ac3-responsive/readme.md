@@ -1,4 +1,4 @@
-### Anthuan Daniel Castro Coronado ----------------------------------------------------------------------------
+### Anthuan Daniel Castro Coronado -
 
 Documentar en el README qué patrón se aplicó a cada zona y por qué.--------------------------------------------
 
