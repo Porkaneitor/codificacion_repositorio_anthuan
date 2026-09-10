@@ -99,6 +99,11 @@ img {
   margin-bottom: 16px;
 }
 
+.seccion-testimonio {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .seccion-entrada {
   width: min(100%, 640px);
   margin-left: auto;
